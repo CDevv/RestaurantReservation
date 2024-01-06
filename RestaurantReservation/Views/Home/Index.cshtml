@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Restaurant>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    @{
+        foreach (var item in Model)
+        {
+            var action = "RestaurantDetails/Index/" + item.Id;
+            <p>#@item.Id - <a href="@action">@item.Name.</a> Rating: @item.Rating</p>
+        }
+    }
+</div>

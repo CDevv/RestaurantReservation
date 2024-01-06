@@ -1,0 +1,10 @@
+﻿@model Restaurant
+
+
+<div>
+    <p>Id: @Model.Id</p>
+    <p>Name: @Model.Name</p>
+    <p>Rating: @Model.Rating</p>
+
+    <button href="/RestaurantDetails/Reservation/@Model.Id" class="btn btn-primary">Reservation</button>
+</div>

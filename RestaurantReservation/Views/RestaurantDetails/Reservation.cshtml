@@ -1,0 +1,16 @@
+﻿@model Reservation
+
+<h4>Reservation</h4>
+<div>
+    <form asp-controller="Reservations" asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+
+        <div>
+            <input type="datetime-local" asp-for="DateTime"/>
+            <span asp-validation-for="DateTime" class="text-danger"></span>
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </form>
+</div>
